@@ -1,0 +1,374 @@
+
+
+body {
+
+    font-size: 12px;
+    font-family: sans-serif;
+    background-color: #fbfbfcee;
+    
+}
+
+h2 {
+
+border: solid rgb(12, 11, 11) 0.5px;
+
+    margin: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #090b0c;
+    font-family: 'cursive';
+}
+
+.nav1 {
+    margin: 1px auto 0;
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #f7f9fa;
+    border-radius: 1px;
+    font-size: 15px;
+    border: 1px solid rgb(5, 3, 3);
+}
+
+.nav1 a {
+    line-height: 50px;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(7, 0, 0);
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav1 .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 1px;
+}
+
+a:nth-child(1) {
+    width: 150px;
+}
+
+a:nth-child(2) {
+    width: 150px;
+}
+
+a:nth-child(3) {
+    width: 150px;
+}
+
+a:nth-child(4) {
+    width: 150px;
+}
+
+a:nth-child(5) {
+    width: 150px;
+}
+
+a:nth-child(6) {
+    width: 155px;
+}
+
+.nav1 .start-home,
+a:nth-child(1):hover~.animation {
+    width: 150px;
+    left: 0;
+    background-color: #62f17ad2;
+}
+
+.nav1 .start-covid,
+a:nth-child(2):hover~.animation {
+    width: 150px;
+    left: 160px;
+     background-color: #62f17ad2;
+}
+
+.nav1 .start-gallery,
+a:nth-child(3):hover~.animation {
+    width: 150px;
+    left: 310px;
+     background-color: #62f17ad2;
+}
+
+.nav1 .start-contact,
+a:nth-child(4):hover~.animation {
+    width: 150px;
+    left: 465px;
+     background-color: #62f17ad2;
+}
+
+.nav1 .start-admin,
+a:nth-child(5):hover~.animation {
+    width: 150px;
+    left: 615px;
+     background-color: #62f17ad2;
+}
+
+.nav1 .start-logout,
+a:nth-child(6):hover~.animation {
+    width: 160px;
+    left: 885px;
+     background-color: #62f17ad2;
+     
+}
+
+
+
+/* home.php code */
+
+.nav3{
+    text-align: center;
+    background-color: rgba(237, 239, 241, 0.904);
+    margin-top: 12px;
+    margin-bottom: 5px;
+    padding-top: 2px;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    font-size: 18px;
+}
+
+
+.nav3 a{
+    
+    padding-top: 25px;
+    height: 25vh;
+width: 300px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(10, 9, 9);
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(241, 80, 51);
+    border-radius: 10px;
+}
+
+.nav3 a:hover {
+    
+    background-color: #f83333;
+    border: solid rgb(240, 9, 9) 1px;
+    border-radius: 50px;
+    color: white;
+}
+
+marquee {
+ 
+  color: red;
+font-size:18px;
+behavior: scroll;
+direction: left;
+
+}
+
+.img{
+
+  padding-left: 8vw;
+
+}
+
+
+.img1 {
+  
+  display: inline-block;
+    position: relative;
+    z-index: 1;
+    height: 350px;
+    width: auto;
+    
+  
+}
+
+.img-logo {
+  height: 10vh;
+   width:50vw;
+  
+   padding-left: 500px;
+}
+
+
+/* gallery.php  */
+
+.container{
+  padding-top: 5px;
+  height: 350px;
+  width: 430px;
+  position: relative;
+}
+.container .wrapper{
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px dashed #c2cdda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrapper.active{
+  border: none;
+}
+.wrapper .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper .icon{
+  font-size: 100px;
+  color: #9658fe;
+}
+.wrapper .text{
+  font-size: 20px;
+  font-weight: 500;
+  color: #5B5B7B;
+}
+.wrapper #cancel-btn i{
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  color: #0a090c;
+  cursor: pointer;
+  display: none;
+}
+.wrapper.active:hover #cancel-btn i{
+  display: block;
+}
+.wrapper #cancel-btn i:hover{
+  color: #e74c3c;
+}
+.wrapper .file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+.wrapper.active:hover .file-name{
+  display: block;
+}
+.container #custom-btn{
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(135deg,#7ba6f7 0%,#9658fe 100%);
+}
+
+.btn2 {
+    margin-top: 3px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(135deg,#f34a17 0%,#eb7d62 100%);
+
+}
+
+
+
+
+/* Donor details */
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(20, 19, 17); 
+    text-align: left;
+    margin: 25px 0 0 25px;
+}
+
+table {
+border: 1px solid rgb(24, 19, 19);
+box-shadow: 0 0 25px 5px rgb(87, 62, 62);
+width: 100px;
+margin: 25px ;
+padding: 5px 10px 5px 10px;
+border-radius: 5px;
+}
+
+td {
+    padding: 15px;
+}
+
+td input {
+    height: 35px;
+    width: 300px;
+    border: solid rgb(236, 45, 11) 1px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 15px 1px rgb(248, 190, 190);
+}
+
+select {
+    height: 35px;
+    width: 300px;
+    border: solid rgb(236, 45, 11) 1px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 15px 1px rgb(248, 190, 190);
+}
+
+placeholder {
+    background-color: red;
+}
+
+.btn {
+
+    background-color: rgb(241, 63, 63);
+    color: white;
+    font-weight: bold;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="d_details.css">
+    <title>Donor Details</title>
+</head>
+
+<body>
+    <nav class="nav1">
+        <a href="home.php" target="_blank"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="https://www.worldometers.info/coronavirus/" target="_blank"><i class="fas fa-head-side-mask"></i>
+            Covid-19</a>
+        <a href="gallery.html" target="_blank"><i class="fas fa-images"></i> Gallery</a>
+        <a href="contact.html" target="_blank"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="admin.php" target="_blank"><i class="fa fa-fw fa-user-tie"></i> Admin</a>
+        <a href="logout.php" target="_blank"><i class="fa fa-fw fa-sign-out"></i> Log Out</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <form action="d_details.php" method="post">
+
+
+        <h1>Donor Details</h1>
+
+
+
+        <table>
+            <tr>
+                <td>First Name<font color="red">*</font><input type="text" id="name" name="fname" required></td>
+                <td>Last Name<font color="red">*</font><input type="text" id="name" name="lname" required></td>
+                <td>Gender<font color="red">*</font><br> <select id="gender" name="gender" required>
+                        <option value="">Select option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                </td>
+                <td>Date of Birth<font color="red">*</font><input type="date" name="dob" id="dob" required></td>
+                </tr>
+                <tr>
+                <td>Phone<font color="red">*</font><input type="text" id="phone" name="phone" maxlength="10" required>
+                </td>
+                <td>Address<font color="red">*</font><input type="text" id="address" name="address" required></td>
+                <td>Tentative Date<font color="red">*</font><input type="date" id="tentative" name="tentative" required>
+                </td>
+            </tr>
+            <tr>
+                <td>State<font color="red">*</font><select id="state" name="state" required>
+                        <option value="0">Select State</option>
+                        <option value="35">Andaman &amp; Nicobar Islands</option>
+                        <option value="28">Andhra Pradesh</option>
+                        <option value="12">Arunachal Pradesh</option>
+                        <option value="18">Assam</option>
+                        <option value="10">Bihar</option>
+                        <option value="94">Chandigarh</option>
+                        <option value="22">Chhattisgarh</option>
+                        <option value="26">Dadra &amp; Nagar Haveli</option>
+                        <option value="25">Daman &amp; Diu</option>
+                        <option value="97">Delhi</option>
+                        <option value="30">Goa</option>
+                        <option value="24">Gujarat</option>
+                        <option value="96">Haryana</option>
+                        <option value="92">Himachal Pradesh</option>
+                        <option value="91">Jammu and Kashmir</option>
+                        <option value="20">Jharkhand</option>
+                        <option value="29">Karnataka</option>
+                        <option value="32">Kerala</option>
+                        <option value="37">Ladakh</option>
+                        <option value="31">Lakshadweep</option>
+                        <option value="23">Madhya Pradesh</option>
+                        <option value="27">Maharashtra</option>
+                        <option value="14">Manipur</option>
+                        <option value="17">Meghalaya</option>
+                        <option value="15">Mizoram</option>
+                        <option value="13">Nagaland</option>
+                        <option value="21">Odisha</option>
+                        <option value="34">Puducherry</option>
+                        <option value="93">Punjab</option>
+                        <option value="98">Rajasthan</option>
+                        <option value="11">Sikkim</option>
+                        <option value="33">Tamil Nadu</option>
+                        <option value="36">Telangana</option>
+                        <option value="16">Tripura</option>
+                        <option value="95">Uttarakhand</option>
+                        <option value="99">Uttar Pradesh</option>
+                        <option value="19">West Bengal</option>
+                    </select>
+                </td>
+                <td>District/City<font color="red">*</font><input type="text" id="city" name="city" required></td>
+                <!-- <td>Blood Bank Name<font color="red">*</font><input type="text" id="bname" name="bname" required></td> -->
+                <td>Hospital<font color="red">*</font><select id="bname" name="bname" required>
+                    <option value="0">Select Hospital</option>
+                    <option value="Lokmanya">Lokmanya Hospital</option>
+                    <option value="sasun">Sasun Hospital</option>
+                    <option value="sahyadri">Sahyadri Hospital</option>
+                    <option value="ruby">Ruby Hospital</option>
+                    <option value="dinanath">Dinanath Mangeshkar Hospital</option>
+                   
+            </td>
+            </tr>
+            <tr>
+                <td>Organs<font color="red">*</font><select id="blood" name="blood" required>
+                        <option value="0">Select Organ To Donate</option>
+                        <option value="Kidney">Kidney</option>
+                        <option value="heart">Heart</option>
+                        <option value="eyes">Eyes</option>
+                        <option value="lungs">Lungs</option>
+                        <option value="liver">Liver</option>
+                        <option value="pancreas">Pancreas</option>
+                        <option value="intestines">Intestines</option>
+                        <!-- <option value="O-">O-Ve</option> -->
+                </td>
+                <td>Aadhar No.<font color="red">*</font><input type="text" id="aadhar" name="aadhar" maxlength="12"
+                        required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class="btn" type="submit" value="Save"></td>
+                <td><input class="btn" type="reset" value="Reset"></td>
+            </tr>
+        </table>
+        </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

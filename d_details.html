@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="d_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <title>Donor Details</title>
+</head>
+
+<body>
+    <nav class="nav1">
+        <a href="home.php" target="_blank"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="https://www.worldometers.info/coronavirus/" target="_blank"><i class="fas fa-head-side-mask"></i>
+            Covid-19</a>
+        <a href="gallery.html" target="_blank"><i class="fas fa-images"></i> Gallery</a>
+        <a href="contact.html" target="_blank"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="admin.php" target="_blank"><i class="fa fa-fw fa-user-tie"></i> Admin</a>
+        <a href="logout.php" target="_blank"><i class="fa fa-fw fa-sign-out"></i> Log Out</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <form action="d_details.php" onsubmit="return validateDateOfBirth()" method="post">
+
+
+        <h1>Donor Details</h1>
+
+
+
+        <table>
+            <tr>
+                <td>First Name<font color="red">*</font><input type="text" id="name" name="fname" required></td>
+                <td>Last Name<font color="red">*</font><input type="text" id="name" name="lname" required></td>
+                <td>Gender<font color="red">*</font><br> <select id="gender" name="gender" required>
+                        <option value="">Select option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                </td>
+                <td>Date of Birth<font color="red">*</font><input type="date" oninput="validateDateOfBirth()" name="dob" id="dob" required></td>
+            </tr>
+            <tr>
+                <td>Phone<font color="red">*</font><input type="text" id="phone" name="phone" maxlength="10" required>
+                </td>
+                <td>Address<font color="red">*</font><input type="text" id="address" name="address" required></td>
+                <td>Tentative Date<font color="red">*</font><input type="date" id="tentative" name="tentative" required>
+                </td>
+            </tr>
+            <tr>
+                <td>State<font color="red">*</font><select id="state" name="state" required>
+                        <option value="0">Select State</option>
+                        <option value="Andaman &Nicobar Islands">Andaman &amp; Nicobar Islands</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadra & Nagar Haveli">Dadra &amp; Nagar Haveli</option>
+                        <option value="Daman & Diu">Daman &amp; Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                </td>
+                <td>District/City<font color="red">*</font><input type="text" id="city" name="city" required></td>
+                <td>Blood Bank Name<font color="red">*</font><input type="text" id="bname" name="bname" required></td>
+            </tr>
+            <tr>
+                <td>Blood Group<font color="red">*</font><select id="blood" name="blood" required>
+                        <option value="0">Select Blood Group</option>
+                        <option value="A+">A+Ve</option>
+                        <option value="A-">A-Ve</option>
+                        <option value="B+">B+Ve</option>
+                        <option value="B-">B-Ve</option>
+                        <option value="AB+">AB+Ve</option>
+                        <option value="AB-">AB-Ve</option>
+                        <option value="O+">O+Ve</option>
+                        <option value="O-">O-Ve</option>
+                </td>
+                <td>Aadhar No.<font color="red">*</font><input type="text" id="aadhar" name="aadhar" maxlength="12"
+                        required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class="btn" type="submit" value="Save" ></td>
+                <td><input class="btn" type="reset" value="Reset"></td>
+            </tr>
+        </table>
+        </div>
+        </div>
+    </form>
+    <script>
+        function validateDateOfBirth() {
+          var dob = document.getElementById("dob").value;
+          var currentDate = new Date();
+          var inputDate = new Date(dob);
+    
+          // Calculate the minimum allowed date (18 years ago)
+          var minDate = new Date();
+          minDate.setFullYear(currentDate.getFullYear() - 18);
+    
+          // Compare the input date with the minimum allowed date
+          if (inputDate > minDate) {
+            alert("You must be at least 18 years old.");
+            return false; // Prevent form submission
+          }
+
+        }
+        function validateDate() {
+      var inputDate = new Date(document.getElementById("date").value);
+      var currentDate = new Date();
+
+      // Compare the input date with the current date
+      if (inputDate <= currentDate) {
+        alert("Please select a date greater than the current date.");
+        return false; // Prevent form submission
+      }
+    }
+      </script>
+</body>
+
+</html>
